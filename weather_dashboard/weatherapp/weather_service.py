@@ -1,9 +1,8 @@
 import requests
 import os
-from django.conf import settings
 
 
-def weather_data(city):
+def get_weather_data(city):
     api_key = os.getenv('OPENWEATHERMAP_API_KEY')
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
 
